@@ -6,7 +6,7 @@ const Users = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/user")
+      .get("https://kareactnodeapp-g6h8dxh9dxdrhubc.canadacentral-01.azurewebsites.net/user")
       .then((response) => setData(response.data))
       .catch((error) => console.error("Error fetching user data:", error));
   }, []);
