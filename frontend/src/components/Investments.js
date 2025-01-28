@@ -6,7 +6,7 @@ const Investments = () => {
 
   useEffect(() => {
     axios
-      .get("https://kareactnodeapp-g6h8dxh9dxdrhubc.canadacentral-01.azurewebsites.net/investments")
+      .get("http://localhost:5000/investments")
       .then((response) => setData(response.data))
       .catch((error) => console.error("Error fetching investments data:", error));
   }, []);
