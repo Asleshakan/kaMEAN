@@ -28,14 +28,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
 });
 
-// Connect to MongoDB
-mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => {
-    console.log("Connected to MongoDB");
+
     app.listen(port, () => console.log(`Server running on port ${port}`));
   })
-  .catch((err) => console.error("Failed to connect to MongoDB:", err));
+  
